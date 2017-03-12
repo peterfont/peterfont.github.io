@@ -1,0 +1,48 @@
+---
+layout: default
+---
+
+<header id="header">
+    <div class="header-content clear">
+        <div class="header-title">
+            <span class="header-avater"></span>
+            <span class="header-name">{{site.github_username}}</span>
+        </div>
+        <ul class="header-nav clear">
+            <li class="header-nav-item">
+                <a href="/">最新</a></li>
+            <li class="header-nav-item">
+                <a href="/archive/index.html">归档</a></li>
+            <li class="header-nav-item">
+                <a href="#">收藏</a></li>
+            <li class="header-nav-item">
+                <a href="#">关于</a>
+            </li>
+        </ul>
+    </div>
+</header>
+<div class="main-wrapper clear">
+    <div class="content-wrapper">
+        <div class="content">
+            <p class="content-title">{{page.title}}</p>
+            <p class="content-date">{{page.date | date: '%Y-%m-%d' }}</p>
+            <div>
+                {{content}}
+            </div>
+        </div>
+    </div>
+    <div class="nav-wrapper">
+        <div class="simple-box">
+            <div class="simple-box-title">
+                标签分类({{site.posts | size}})
+            </div>
+            <div class="simple-box-content">
+                {% for category in site.categories %}
+                <a href="#">
+                    ● {{ category | first }} ({{ category | last | size }})
+                </a>
+                {% endfor%}
+            </div>
+        </div>
+    </div>
+</div>

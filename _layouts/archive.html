@@ -1,0 +1,67 @@
+---
+layout: default
+---
+
+<header id="header">
+    <div class="header-content clear">
+        <div class="header-title">
+            <span class="header-avater"></span>
+            <span class="header-name">{{site.github_username}}</span>
+        </div>
+        <ul class="header-nav clear">
+            <li class="header-nav-item">
+                <a href="/">最新</a></li>
+            <li class="header-nav-item active">
+                <a href="/archive/index.html">归档</a></li>
+            <li class="header-nav-item">
+                <a href="#">收藏</a></li>
+            <li class="header-nav-item">
+                <a href="#">关于</a>
+            </li>
+        </ul>
+    </div>
+</header>
+<div class="main-wrapper clear">
+    <div class="content-wrapper">
+        <div class="content archive">
+            <div class="archive-items">
+                {% for post in paginator.posts %}
+                <div class="archive-item">
+                    <a href="{{ post.url }}">{{post.title}}</a>
+                    <span>{{ post.date | date: '%Y-%m-%d'  }}</span>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="page">
+                {% if paginator.previous_page %}
+                <a href="{{ paginator.previous_page_path }}" class="prev-page">上一页</a>
+                {% else %}
+                <span class="previous">上一页</span>
+                {% endif %}
+                <span class="page_number">{{ paginator.page }}/{{ paginator.total_pages }}</span>
+                {% if paginator.next_page %}
+                <a href="{{ paginator.next_page_path }}" class="next-page">下一页</a>
+                {% else %}
+                <span class="next-page">下一页</span>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="nav-wrapper">
+        <div class="simple-box">
+            <div class="simple-box-title">
+                标签分类({{site.posts | size}})
+            </div>
+            <div class="simple-box-content">
+                {% for category in site.categories %}
+                <a href="#">
+                    ● {{ category | first }} ({{ category | last | size }})
+                </a>
+                {% endfor%}
+            </div>
+        </div>
+    </div>
+
+</div>
+
+

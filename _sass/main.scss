@@ -1,0 +1,157 @@
+.main-wrapper{
+  width:730px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 40px;
+  padding-right:270px;
+}
+.main-wrapper:after {
+  clear: both;
+  content: " ";
+  display: table;
+}
+.content-wrapper{
+   width: 100%;
+   border: 1px solid #dfe2e5;
+   border-radius: 3px;
+   background-color: #fff;
+   float: left;
+}
+.content{
+  padding:20px 30px;
+}
+.nav-wrapper{
+  width: 230px;
+  float: right;
+  margin-right: -270px;
+  min-height: 200px;
+  .simple-box{
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #dfe2e5;
+    border-radius: 3px;
+  }
+  .simple-box-title{
+    font-size:14px;
+    color: #0366d6;
+    margin-bottom: 10px;
+  }
+  .simple-box-content{
+    a{
+      display: inline-block;
+      padding: 0.2em 0.9em;
+      margin: 0 0.5em 0.5em 0;
+      white-space: nowrap;
+      background-color: #f1f8ff;
+      border-radius: 3px;
+      color: #0366d6;
+      text-decoration: none;
+    }
+
+  }
+}
+
+
+.article-items{
+  //word-spacing:8px;
+  //letter-spacing: 2px;
+  .article-item{
+      padding-top: 20px;
+      border-bottom:1px dashed #dfe2e5;
+      padding-bottom:20px;
+      &:last-child{
+          border-bottom: none;
+      }
+  }
+  .article-item-title{
+      width: 400px;
+      a{
+        text-decoration: none;
+        font-size:14px;
+        color:#999;
+        //word-spacing:8px;
+        //letter-spacing: 2px;
+      }
+  }
+  .article-item-date {
+      span{
+        border-radius: 3px;
+        color: #0366d6;
+      }
+      margin-top:20px;
+      color:#888;
+      text-align: right;
+  }
+  .article-item-tags{
+      margin-top: 15px;
+      span{
+        display: inline-block;
+        padding: 0.2em 0.9em;
+        margin: 0 0.5em 0.5em 0;
+        white-space: nowrap;
+        background-color: #f1f8ff;
+        border-radius: 3px;
+        color: #999;
+        cursor: pointer;
+      }
+  }
+  .article-item-excerpt{
+      margin-top:20px;
+      color:#999;
+      line-height: 20px;
+      //word-spacing:8px;
+      //letter-spacing: 2px;
+  }
+}
+
+//归档
+
+.archive{
+  .archive-year{
+     height:30px;
+     line-height: 30px;
+     font-size: 18px;
+     margin-bottom: 10px;
+  }
+  .archive-month{
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .archive-items{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .archive-item{
+      padding:5px 0;
+      a{
+        color:#999;
+      }
+      span{
+        color:#888;
+      }
+  }
+
+}
+
+//详情页
+
+.content-title{
+   font-size: 16px;
+   margin-bottom: 10px;
+}
+.content-date{
+   font-size: 12px;
+   margin-bottom: 20px;
+}
+
+//分页
+.page{
+  .next-page{
+    color: #0366d6;
+  }
+  .prev-page{
+    color: #0366d6;
+  }
+
+}

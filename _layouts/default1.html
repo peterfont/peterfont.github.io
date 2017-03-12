@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% include head.html %}
+</head>
+<body>
+{% include header.html %}
+
+<!--site.time	当前的时间(运行 Jekyll 时的时间)-->
+<!--site.pages	所有页面列表-->
+<!--site.posts	按时间逆序排列的所有文章列表-->
+<!--site.related_posts	如果当前被处理的页面是一个 post 文件，那这个变量是一个包含了最多10篇相关的文章列表-->
+<!--site.static_files	所有静态文件的列表(如：没有被 Jekyll 处理的文件)，每个文件有3个属性：path、modified_time 和 extname-->
+<!--site.html_pages	所有 HTML 页面列表-->
+<!--site.collections	自定义的对象集合列表，参考 Collections-->
+<!--site.data	_data 目录下 YAML 文件的数据列表-->
+<!--site.documents	所有 Collections 里面的文档列表-->
+<!--site.categories.CATEGORY	所有在 CATEGORY 类别下的 post 列表-->
+<!--site.tags.TAG	所有在 TAG 标签下的 post 列表-->
+<!--site.[CONFIGURATION_DATA]	其他自定义的变量-->
+<!--<p>-->
+    <!--site.static_files:{{site.static_files}}-->
+<!--</p>-->
+
+<!--<p>-->
+    <!--site.html_pages:{{site.html_pages}}-->
+<!--</p>-->
+<!--<p>-->
+    <!--site.categories:{{site.categories}}-->
+<!--</p>-->
+<!--<p>-->
+    <!--site.tags:{{site.tags}}-->
+<!--</p>-->
+<!--<hr>-->
+{{content}}
+
+{% include footer.html %}
+</body>
+</html>

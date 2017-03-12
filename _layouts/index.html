@@ -1,0 +1,101 @@
+---
+layout: default
+arr: 1 2 3 4
+---
+length:{{site.pages.length}}
+<hr>
+<p>
+    {% for item in page%}
+    {{item[0]}}:{{item[1]}}
+    <br>
+    {% endfor %}
+</p>
+<hr>
+<p>
+    {% for i in page.arr%}
+        {{i}}
+    {% endfor %}
+</p>
+
+------------------
+<p>
+{% for item in  site.posts	 %}
+    <p>
+        <p>title:{{item.title}}</p>
+        <p>date:{{item.date}}</p>
+        <p>excerpt:{{item.excerpt}}</p>
+        <p>url:{{item.url}}</p>
+        <p>id:{{item.id}}</p>
+        <p>tags:{{item.tags}}</p>
+        <p>path:{{item.path}}</p>
+        <p>next:{{item.next.path}}</p>
+        <p>previous:{{item.previous.path}}</p>
+        <p>categories:{{item.categories}}</p>
+        <p>layout:{{post.layout}}</p>
+        <p>content:{{item.content}}</p>
+    </p>
+    <hr>
+{% endfor %}
+</p>
+================
+<p>
+    {% for item in  site.pages%}
+        <p>
+            {{item}}
+        </p>
+    {% endfor %}
+</p>
+=========++++
+<p>{{site.html_pages}}</p>
+=========++++
+<p>
+    {{site.data | date: '%Y-%m-%d' }}
+</p>
+
+=======++++分页信息
+<br>
+paginate: 5
+paginate_path: "blog/page:num/"
+<br>
+paginator.per_page	每一页的 post 数量
+<br>
+paginator.posts	当前页面上可用的 post 列表
+<br>
+paginator.total_posts	所有 post 的数量
+<br>
+paginator.total_pages	分页总数
+<br>
+paginator.page	当前页的页码，或者 nil
+<br>
+paginator.previous_page	上一页的页码，或者 nil
+<br>
+paginator.previous_page_path	上一页的路径，或者 nil
+<br>
+paginator.next_page	下一页的页码，或者 nil
+<br>
+paginator.next_page_path	下一页的路径，或者 nil
+<br>
+
+<!-- This loops through the paginated posts -->
+{% for post in paginator.posts %}
+<h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+<p><span class="date">{{ post.date }}</span></p>
+<div class="content">
+    {{ post.content }}
+</div>
+{% endfor %}
+
+<!-- Pagination links -->
+<div class="pagination">
+    {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+    {% else %}
+    <span class="previous">Previous</span>
+    {% endif %}
+    <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+    {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+    {% else %}
+    <span class="next ">Next</span>
+    {% endif %}
+</div>
