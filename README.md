@@ -1,2 +1,2 @@
 # peterfont.github.io
-blog
+博客
