@@ -2,7 +2,7 @@
 layout: post
 title:  "jekyll目录"
 date:   2017-03-06 15:06:23
-categories: jekyll update
+categories: jekyll
 
 ---
 ![image](/images/9B1B68D1-62DD-4F5D-9D95-E9BF1052201E.png)
