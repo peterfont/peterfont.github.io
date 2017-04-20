@@ -117,6 +117,9 @@ $(function(){
 
             },
             create:function(m){
+                if(!m || !m.title){
+                    return;
+                }
                 var mod  = new model(m.title);
                 mod.on("destory",this.remove(mod));
                 this.list.push(mod);
